@@ -1,3 +1,13 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Panda Express Nutrition Calculator',
+  description: 'Our privacy policy explains how we handle your data when you use our Panda Express nutrition calculator.',
+  alternates: {
+    canonical: 'https://panda-express-nutrition.net/privacy'
+  }
+};
+
 export default function PrivacyPage() {
   return (
     <div className="container max-w-[1400px] mx-auto px-4 py-6">

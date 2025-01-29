@@ -1,6 +1,15 @@
+import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Panda Express Nutrition Calculator',
+  description: 'Get in touch with us for any questions about Panda Express nutrition information or our calculator tool.',
+  alternates: {
+    canonical: 'https://panda-express-nutrition.net/contact'
+  }
+};
 
 export default function ContactPage() {
   return (

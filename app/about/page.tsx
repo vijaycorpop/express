@@ -1,3 +1,13 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us | Panda Express Nutrition Calculator',
+  description: 'Learn about our mission to help you make informed dining choices at Panda Express with accurate nutritional information and easy-to-use calculator.',
+  alternates: {
+    canonical: 'https://panda-express-nutrition.net/about'
+  }
+};
+
 export default function AboutPage() {
   return (
     <div className="container max-w-[1400px] mx-auto px-4 py-6">

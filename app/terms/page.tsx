@@ -1,3 +1,13 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Panda Express Nutrition Calculator',
+  description: 'Read our terms of service to understand the conditions for using our Panda Express nutrition calculator.',
+  alternates: {
+    canonical: 'https://panda-express-nutrition.net/terms'
+  }
+};
+
 export default function TermsPage() {
   return (
     <div className="container max-w-[1400px] mx-auto px-4 py-6">
