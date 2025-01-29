@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 346 91% 44%;    /* #ce123c */
+  --primary-foreground: 0 0% 100%;  /* #ffffff */
+  
+  --secondary: 92 26% 49%;   /* #759f5d */
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 27 34% 50%;      /* #ab7a54 */
+  --accent-foreground: 0 0% 100%;
+  
+  --background: 0 0% 100%;   /* #ffffff */
+  --foreground: 0 0% 0%;     /* #000000 */
+  
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  
+  --destructive: 346 91% 44%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 346 91% 44%;
+  
+  --radius: 0.75rem;
+}
+
+.dark {
+  --primary: 346 91% 44%;    /* #ce123c */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 92 26% 49%;   /* #759f5d */
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 27 34% 50%;      /* #ab7a54 */
+  --accent-foreground: 0 0% 100%;
+  
+  --background: 0 0% 0%;     /* #000000 */
+  --foreground: 0 0% 100%;   /* #ffffff */
+  
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 0 0% 4%;
+  --popover-foreground: 0 0% 100%;
+  
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 63%;
+  
+  --destructive: 346 91% 44%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 0 0% 14%;
+  --input: 0 0% 14%;
+  --ring: 346 91% 44%;
+}
+
+@layer base {
+  * {
+    @apply border-zinc-200 dark:border-zinc-800;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .menu-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    background: linear-gradient(to bottom right, hsl(var(--card)) 0%, hsl(var(--card)) 100%);
+    @apply border border-zinc-200 dark:border-zinc-800;
+  }
+
+  .menu-card:hover {
+    @apply border-primary/50;
+  }
+
+  .nutrition-value {
+    @apply font-mono tracking-tight;
+  }
+
+  .macro-box {
+    @apply rounded-xl bg-secondary bg-opacity-10 p-3 transition-colors;
+  }
+
+  .macro-box:hover {
+    @apply bg-secondary bg-opacity-20;
+  }
+
+  .allergen-tag {
+    @apply px-2 py-1 text-xs rounded-full text-destructive;
+    @apply bg-destructive bg-opacity-10;
+    @apply dark:bg-destructive dark:bg-opacity-20 dark:text-destructive-foreground;
+  }
+
+  .summary-bar {
+    @apply backdrop-blur-xl bg-background bg-opacity-95;
+    box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .selected-items-panel {
+    @apply backdrop-blur-xl bg-background bg-opacity-95;
+    box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary bg-opacity-20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary bg-opacity-30;
+}

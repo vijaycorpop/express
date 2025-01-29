@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /about
+
+# Disallow other pages
+Disallow: /contact
+Disallow: /privacy
+Disallow: /terms
+
+# Sitemap
+Sitemap: https://panda-express-nutrition.net/sitemap.xml
